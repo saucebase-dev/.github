@@ -50,40 +50,15 @@ When you install a Saucebase module, the source code lands in your `modules/` di
 
 ---
 
-## Why Saucebase?
-
-Most Laravel starter kits force you to choose between convenience and control. You either accept their rigid architecture or maintain a messy fork. Saucebase eliminates this trade-off.
-
-| Traditional Starter Kits | Saucebase |
-|---|---|
-| Code locked in `vendor/` | Code in your `modules/` directory |
-| Can't modify without patching | Edit files directly — you own them |
-| Upstream updates can break your app | You control when and how things change |
-| Fight the package's assumptions | Customize freely to match your architecture |
-| Vendor controls your roadmap | You control your roadmap |
-
----
-
 ## Key Features
 
-### 🧩 Modular Architecture
-Self-contained feature modules that copy into your codebase. Each module includes its own routes, controllers, models, migrations, Vue pages, and tests. Enable only what you need.
-
-### ⚡ Modern Development Experience
-- **One-command setup** — `bash bin/setup-env` starts Docker containers, configures your database, generates SSL certificates, and builds assets automatically
-- **Instant hot reload** — Vite HMR means you see changes immediately without page refresh
-- **Type-safe routes** — Ziggy generates TypeScript helpers from your Laravel routes, giving you autocomplete and type checking across the stack
-- **SSR on demand** — opt-in server-side rendering per page for SEO-critical pages
-
-### 🏗️ Production Ready
-- **PHPStan level 5** static analysis on all PHP code
-- **Laravel Pint** + ESLint for consistent code style
-- **Playwright** E2E testing pre-configured with Laravel integration
-- **Commitlint** for conventional commit messages
-- **Filament 5** admin panel included
-
-### 🎨 Beautiful UI Components
-Built with [shadcn-vue](https://www.shadcn-vue.com/) — accessible, customizable components using Tailwind CSS 4 and Reka UI. Dark mode supported out of the box.
+- 🧩 **Modular Architecture** — self-contained feature modules that copy into your codebase; each includes routes, controllers, models, migrations, Vue pages, and tests
+- ⚡ **One-command setup** — Docker, Herd, Sail, and native PHP all supported; get running in minutes
+- 🔁 **No API layer needed** — Inertia.js connects Laravel controllers directly to Vue components with full TypeScript type safety
+- 🔍 **SSR on demand** — opt-in server-side rendering per page for SEO-critical routes
+- 🏗️ **Production-ready tooling** — PHPStan level 5, Laravel Pint, ESLint, Playwright E2E, commitlint
+- 🎨 **Beautiful UI** — [shadcn-vue](https://www.shadcn-vue.com/) components with Tailwind CSS 4 and dark mode out of the box
+- 🛡️ **Admin panel** — Filament 5 included with user management and module-specific resources
 
 ---
 
@@ -91,345 +66,41 @@ Built with [shadcn-vue](https://www.shadcn-vue.com/) — accessible, customizabl
 
 | Layer | Technologies |
 |---|---|
-| **Backend** | Laravel 12 · PHP 8.4+ · Filament 5 (admin panel) · Spatie Permission |
-| **Frontend** | Vue 3 Composition API · TypeScript 5.8 · Inertia.js 2.0 |
-| **Styling** | Tailwind CSS 4 · shadcn-vue · Lucide icons |
-| **Database** | MySQL · Redis (cache, sessions, queues) |
-| **Testing** | Playwright (E2E) · PHPUnit (backend) |
+| **Backend** | Laravel 12 · PHP 8.4+ · Filament 5 · Spatie Permission |
+| **Frontend** | Vue 3 · TypeScript 5.8 · Inertia.js 2.0 · shadcn-vue |
+| **Styling** | Tailwind CSS 4 · Reka UI · Lucide icons |
+| **Database** | MySQL · Redis |
+| **Testing** | Playwright (E2E) · PHPUnit |
 | **Dev Tools** | Vite 6 · PHPStan · Laravel Pint · ESLint · Prettier · Husky |
-| **Infrastructure** | Docker · Nginx · Mailpit (local email) |
+| **Infrastructure** | Docker · Nginx · Mailpit |
 
 ---
 
-## Quick Start
+## Modules
 
-### Docker (recommended)
-
-Only Docker Desktop and Node.js 22+ are required.
-
-```bash
-git clone https://github.com/saucebase-dev/saucebase.git my-app
-cd my-app
-bash bin/setup-env
-```
-
-Visit **https://localhost** when the setup completes. The bootstrap script handles everything: starts Docker containers (MySQL, Redis, Mailpit), installs dependencies, runs migrations, enables modules, and builds frontend assets.
-
-### Laravel Herd
-
-```bash
-git clone https://github.com/saucebase-dev/saucebase.git my-app
-cd my-app
-composer install
-cp .env.example .env
-# Set APP_URL to your Herd site URL in .env
-# Configure DB_* credentials in .env
-php artisan saucebase:install
-npm install && npm run dev
-```
-
-### Laravel Sail
-
-```bash
-git clone https://github.com/saucebase-dev/saucebase.git my-app
-cd my-app
-cp .env.example .env
-# Configure .env for Sail (DB_HOST=mysql, REDIS_HOST=redis, etc.)
-sail up -d
-sail composer install
-sail artisan saucebase:install
-npm install && npm run dev
-```
-
-### Native PHP
-
-```bash
-git clone https://github.com/saucebase-dev/saucebase.git my-app
-cd my-app
-composer install
-cp .env.example .env
-# Configure APP_URL, DB_*, REDIS_* in .env
-php artisan saucebase:install
-npm install && npm run dev
-```
-
-### Default Credentials
-
-After running the installer with the Auth module:
-
-- **Email:** `chef@saucebase.dev`
-- **Password:** `secretsauce`
-
-> ⚠️ Change these before going to production.
-
----
-
-## Installer Options
-
-```bash
-php artisan saucebase:install [options]
-```
-
-| Flag | Description |
-|---|---|
-| _(none)_ | Interactive: `migrate --seed`, prompts for module selection |
-| `--fresh` | Runs `migrate:fresh --seed` — **drops all tables first** |
-| `--all-modules` | Enable and migrate all discovered modules automatically |
-| `--modules=Auth,Settings` | Enable specific modules only |
-| `--force` | Skip confirmations |
-| `--no-interaction` | Non-interactive mode (selects all modules automatically) |
-
----
-
-## Available Modules
-
-Modules are self-contained features that install directly into your repository. Installing a module is as simple as:
-
-```bash
-composer require saucebase/<module-name>
-php artisan module:enable <ModuleName>
-php artisan module:migrate <ModuleName> --seed
-npm run build
-```
+Modules are self-contained features that copy directly into your repository — you own every line. Each module ships with its own routes, controllers, models, migrations, Vue pages, and tests.
 
 ### 🔐 [Auth](https://github.com/saucebase-dev/auth)
-
-Complete authentication system built on top of Laravel's built-in auth.
-
-- Email/password login and registration with rate limiting
-- Password reset via email
-- Email verification with resend support
-- **Social login (OAuth)** — Google and GitHub via Laravel Socialite
-- Provider connect/disconnect with safety guards
-- **Admin impersonation** — admins can impersonate any user from the Filament panel
-- Filament admin panel (`/admin`) with full user management
+Complete authentication: email/password, password reset, email verification, social login (Google & GitHub via OAuth), provider connect/disconnect, and admin user impersonation. Includes a Filament admin panel at `/admin`.
 
 ### ⚙️ [Settings](https://github.com/saucebase-dev/settings)
-
-User profile management (requires Auth module).
-
-- Edit profile — name, email
-- Avatar upload (JPEG, PNG, GIF, WebP; max 2 MB) via Spatie Media Library
-- Avatar fallback — social provider photo, then default avatar
-- Password change with confirmation email
-- Social provider connect/disconnect from profile page
+User profile management: edit name/email, upload an avatar, change password, and manage connected OAuth providers. Requires the Auth module.
 
 ### 💳 [Billing](https://github.com/saucebase-dev/billing)
-
-Subscription management and payment processing (requires Auth module).
-
-- Stripe checkout flow with configurable session expiry
-- Cancel at period end and resume before expiry
-- Stripe-hosted billing portal (update card, download invoices)
-- Invoice list with status indicators
-- Webhook processing with idempotency via `webhook_events` table
-- Gateway driver pattern — Stripe by default, Paddle and LemonSqueezy configurable
-- Automatic `subscriber` role management via Spatie Permission
-- Pricing section component for your landing page
+Stripe-powered subscriptions: checkout sessions, subscription management, billing portal, invoice list, and webhook processing. Gateway driver pattern supports Paddle and LemonSqueezy too. Requires the Auth module.
 
 ### 📢 [Announcements](https://github.com/saucebase-dev/announcements)
-
-Site-wide announcement banners (requires Auth module).
-
-- Fixed banner at the top of every page, above the navigation
-- Rich text content — bold, italic, links, lists
-- Scheduling with `starts_at` / `ends_at`
-- Audience targeting — public pages, authenticated pages, or both
-- Cookie-based dismissal (SSR-safe, no database writes)
-- Filament admin CRUD at `/admin`
+Site-wide announcement banners: rich text, scheduling, audience targeting (guests/authenticated/all), and cookie-based dismissal. Managed via Filament admin at `/admin`.
 
 ---
 
-## Architecture
+## Documentation
 
-Saucebase follows the **VILT stack** pattern: Vue 3 as the frontend, Inertia.js as the glue, Laravel as the backend, and Tailwind CSS for styling.
-
-```
-Browser ──HTTPS──► Laravel (routes + controllers)
-                        │
-                        ▼
-                   Inertia Response (JSON)
-                        │
-                        ▼
-              Vue 3 (renders page component)
-                   ▲         │
-                   │         ▼
-              SPA navigation  Props (typed with TypeScript)
-```
-
-### No API Layer Needed
-
-Inertia.js lets your controllers pass data directly to Vue components as typed props — no REST API, no GraphQL, no manual serialization.
-
-```php
-// Laravel controller
-return Inertia::render('Dashboard', [
-    'stats' => $stats,
-    'user'  => $user,
-]);
-```
-
-```typescript
-// Vue component — fully typed
-const props = defineProps<{ stats: Stats; user: User }>();
-```
-
-### Module Structure
-
-Each module lives in `modules/<Name>/` with a predictable layout:
-
-```
-modules/Auth/
-├── config/           # Module configuration
-├── database/
-│   ├── factories/    # Model factories
-│   ├── migrations/   # Database migrations
-│   └── seeders/      # Database seeders
-├── patches/          # Git patches for core app integration
-├── resources/
-│   └── js/           # Vue pages and components
-├── routes/           # Web routes
-├── src/              # PHP source (Controllers, Models, etc.)
-└── tests/            # Feature and E2E tests
-```
-
-### SSR (Opt-In)
-
-Server-side rendering is available but disabled by default. Enable it per-route for SEO-critical pages:
-
-```php
-return Inertia::render('Products/Index')->withSSR();  // SSR on
-return Inertia::render('Dashboard');                  // SSR off (default)
-```
+Full installation guides, configuration reference, architecture deep-dives, and development workflows are maintained in the **[Saucebase Documentation](https://saucebase-dev.github.io/docs/)** — the single source of truth.
 
 ---
 
-## Development Commands
-
-### Frontend
-
-```bash
-npm run dev          # Start Vite dev server with HMR
-npm run build        # Build for production (includes SSR build)
-npm run format       # Format code with Prettier
-npm run lint         # Lint and auto-fix with ESLint
-```
-
-### Backend (Docker)
-
-```bash
-docker compose exec app php artisan <command>
-docker compose exec app composer <command>
-```
-
-### Testing
-
-```bash
-# Backend tests
-php artisan test
-
-# E2E tests (Playwright)
-npx playwright test
-npx playwright test --ui            # Interactive UI mode
-npx playwright test --headed        # Headed browser mode
-
-# Module-specific tests
-php artisan test --testsuite=Modules --filter=Auth
-npx playwright test --project="@Auth*"
-```
-
-### Module Management
-
-```bash
-php artisan module:list                          # List all modules and their status
-php artisan module:enable <ModuleName>           # Enable a module
-php artisan module:disable <ModuleName>          # Disable a module
-php artisan module:migrate <ModuleName> --seed   # Run module migrations
-```
-
----
-
-## Directory Structure
-
-```
-saucebase/
-├── app/                    # Core Laravel application
-│   ├── Http/               # Controllers, Middleware
-│   ├── Models/             # Eloquent models
-│   └── Providers/          # Service providers
-├── bin/
-│   └── setup-env           # Docker bootstrap script
-├── docker/                 # Docker configuration
-├── modules/                # Installed Saucebase modules
-│   ├── Auth/               # Authentication module
-│   ├── Settings/           # User settings module
-│   ├── Billing/            # Billing/subscription module
-│   └── Announcements/      # Announcement banners module
-├── resources/
-│   └── js/
-│       ├── components/     # Shared Vue components (shadcn-vue)
-│       ├── layouts/        # Page layouts
-│       ├── pages/          # Core application pages
-│       └── types/          # TypeScript type definitions
-├── routes/                 # Application routes
-└── tests/                  # Core application tests
-```
-
----
-
-## Configuration
-
-Key environment variables unique to Saucebase:
-
-| Variable | Description |
-|---|---|
-| `APP_URL` | Full URL including protocol — **must be set before install** |
-| `APP_HOST` | Hostname portion (e.g. `localhost`, `my-app.test`) |
-| `APP_SLUG` | Project slug for storage/cache keys — don't change after deploy |
-| `VITE_LOCAL_STORAGE_KEY` | Frontend localStorage prefix (defaults to `APP_SLUG`) |
-| `BILLING_GATEWAY` | Payment gateway: `stripe` (default), `paddle`, `lemonsqueezy` |
-| `STRIPE_SECRET_KEY` | Stripe secret key (Billing module) |
-| `STRIPE_PUBLISHABLE_KEY` | Stripe publishable key (Billing module) |
-| `STRIPE_WEBHOOK_SECRET` | Stripe webhook signing secret (Billing module) |
-| `GOOGLE_CLIENT_ID` | Google OAuth client ID (Auth module) |
-| `GITHUB_CLIENT_ID` | GitHub OAuth client ID (Auth module) |
-
----
-
-## Docker Services
-
-When using the Docker setup, the following services are available:
-
-| Service | Purpose | Default Port |
-|---|---|---|
-| **nginx** | Web server with SSL | 80, 443 |
-| **app** | PHP-FPM + CLI | — |
-| **mysql** | Database | 3306 |
-| **redis** | Cache / Queue / Sessions | 6379 |
-| **mailpit** | Local email testing UI | 8025 |
-
----
-
-## Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feat/your-feature`
-3. Make your changes following the coding standards
-4. Run tests: `php artisan test` and `npx playwright test`
-5. Commit using conventional commits: `git commit -m "feat: add your feature"`
-6. Open a pull request
-
-### Coding Standards
-
-- PHP: [Laravel Pint](https://laravel.com/docs/pint) + PHPStan level 5
-- TypeScript/Vue: ESLint + Prettier
-- Commits: [Conventional Commits](https://www.conventionalcommits.org/) enforced by commitlint
-
----
-
-## Related Repositories
+## Repositories
 
 | Repository | Description |
 |---|---|

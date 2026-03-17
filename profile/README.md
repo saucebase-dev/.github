@@ -94,6 +94,7 @@ Site-wide announcement banners: rich text, scheduling, audience targeting (guest
 
 ### 🧭 [Roadmap](https://github.com/saucebase-dev/roadmap)
 The Roadmap module gives authenticated users a page to suggest features or bugs, vote on what matters most, and see where things stand. New suggestions go through a moderation step before they become visible to others.
+
 ---
 
 ## Documentation

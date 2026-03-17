@@ -92,6 +92,8 @@ Stripe-powered subscriptions: checkout sessions, subscription management, billin
 ### 📢 [Announcements](https://github.com/saucebase-dev/announcements)
 Site-wide announcement banners: rich text, scheduling, audience targeting (guests/authenticated/all), and cookie-based dismissal. Managed via Filament admin at `/admin`.
 
+### 🧭 [Roadmap](https://github.com/saucebase-dev/roadmap)
+The Roadmap module gives authenticated users a page to suggest features or bugs, vote on what matters most, and see where things stand. New suggestions go through a moderation step before they become visible to others.
 ---
 
 ## Documentation

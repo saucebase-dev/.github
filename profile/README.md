@@ -25,7 +25,7 @@
   <img src="https://github.com/saucebase-dev/saucebase/raw/main/public/images/screenshots/preview.gif" alt="Saucebase preview" width="700" />
 
   <p>
-    Built on the <strong>VILT stack</strong> (Vue 3, Inertia.js, Laravel 12, Tailwind CSS 4) with TypeScript, SSR support,
+    Built on the <strong>VILT stack</strong> (Vue 3, Inertia.js, Laravel 13, Tailwind CSS 4) with TypeScript, SSR support,
     and a copy-and-own module system inspired by shadcn/ui. Install only what you need, customize everything,
     no vendor lock-in.
   </p>
@@ -66,7 +66,7 @@ When you install a Saucebase module, the source code lands in your `modules/` di
 
 | Layer | Technologies |
 |---|---|
-| **Backend** | Laravel 12 · PHP 8.4+ · Filament 5 · Spatie Permission |
+| **Backend** | Laravel 13 · PHP 8.4+ · Filament 5 · Spatie Permission |
 | **Frontend** | Vue 3 · TypeScript 5.8 · Inertia.js 2.0 · shadcn-vue |
 | **Styling** | Tailwind CSS 4 · Reka UI · Lucide icons |
 | **Database** | MySQL · Redis |

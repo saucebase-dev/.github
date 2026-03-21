@@ -11,7 +11,7 @@
     <a href="https://github.com/saucebase-dev/saucebase/actions/workflows/test.yml"><img src="https://github.com/saucebase-dev/saucebase/actions/workflows/test.yml/badge.svg" alt="Tests" /></a>
     <a href="https://github.com/saucebase-dev/saucebase/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License" /></a>
     <a href="https://php.net"><img src="https://img.shields.io/badge/PHP-8.4%2B-777BB4?logo=php&logoColor=white" alt="PHP Version" /></a>
-    <a href="https://laravel.com"><img src="https://img.shields.io/badge/Laravel-12.0-FF2D20?logo=laravel&logoColor=white" alt="Laravel" /></a>
+    <a href="https://laravel.com"><img src="https://img.shields.io/badge/Laravel-13.0-FF2D20?logo=laravel&logoColor=white" alt="Laravel" /></a>
     <a href="https://vuejs.org"><img src="https://img.shields.io/badge/Vue.js-3.4-4FC08D?logo=vue.js&logoColor=white" alt="Vue.js" /></a>
     <a href="https://typescriptlang.org"><img src="https://img.shields.io/badge/TypeScript-5.8-3178C6?logo=typescript&logoColor=white" alt="TypeScript" /></a>
     <a href="https://vitejs.dev"><img src="https://img.shields.io/badge/Vite-6.4-646CFF?logo=vite&logoColor=white" alt="Vite" /></a>

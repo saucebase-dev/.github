@@ -95,9 +95,15 @@ Site-wide announcement banners: rich text, scheduling, audience targeting (guest
 ### 🧭 [Roadmap](https://github.com/saucebase-dev/roadmap)
 The Roadmap module gives authenticated users a page to suggest features or bugs, vote on what matters most, and see where things stand. New suggestions go through a moderation step before they become visible to others.
 
----
-
 ## Documentation
+
+You can get Saucebase running in just a few seconds. Only Docker and Node.js are required:
+
+```bash
+git clone https://github.com/sauce-base/saucebase.git my-app
+cd my-app
+bash bin/setup-env
+```
 
 Full installation guides, configuration reference, architecture deep-dives, and development workflows are maintained in the **[Saucebase Documentation](https://saucebase-dev.github.io/docs/)** — the single source of truth.
 

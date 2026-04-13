@@ -13,12 +13,13 @@
     <a href="https://php.net"><img src="https://img.shields.io/badge/PHP-8.4%2B-777BB4?logo=php&logoColor=white" alt="PHP Version" /></a>
     <a href="https://laravel.com"><img src="https://img.shields.io/badge/Laravel-13.0-FF2D20?logo=laravel&logoColor=white" alt="Laravel" /></a>
     <a href="https://vuejs.org"><img src="https://img.shields.io/badge/Vue.js-3.4-4FC08D?logo=vue.js&logoColor=white" alt="Vue.js" /></a>
-    <a href="https://typescriptlang.org"><img src="https://img.shields.io/badge/TypeScript-5.8-3178C6?logo=typescript&logoColor=white" alt="TypeScript" /></a>
-    <a href="https://vitejs.dev"><img src="https://img.shields.io/badge/Vite-6.4-646CFF?logo=vite&logoColor=white" alt="Vite" /></a>
-    <a href="https://tailwindcss.com"><img src="https://img.shields.io/badge/Tailwind%20CSS-4.1-06B6D4?logo=tailwind-css&logoColor=white" alt="Tailwind CSS" /></a>
-    <a href="https://inertiajs.com"><img src="https://img.shields.io/badge/Inertia.js-2.0-9553E9?logo=inertia&logoColor=white" alt="Inertia.js" /></a>
+    <a href="https://typescriptlang.org"><img src="https://img.shields.io/badge/TypeScript-5.9-3178C6?logo=typescript&logoColor=white" alt="TypeScript" /></a>
+    <a href="https://vitejs.dev"><img src="https://img.shields.io/badge/Vite-8.0-646CFF?logo=vite&logoColor=white" alt="Vite" /></a>
+    <a href="https://tailwindcss.com"><img src="https://img.shields.io/badge/Tailwind%20CSS-4.2-06B6D4?logo=tailwind-css&logoColor=white" alt="Tailwind CSS" /></a>
+    <a href="https://nodejs.org"><img src="https://img.shields.io/badge/Node.js-22.0%2B-339933?logo=node.js&logoColor=white" alt="Node.js" /></a>
+    <a href="https://inertiajs.com"><img src="https://img.shields.io/badge/Inertia.js-3.0-9553E9?logo=inertia&logoColor=white" alt="Inertia.js" /></a>
     <a href="https://filamentphp.com"><img src="https://img.shields.io/badge/Filament-5.0-10B981?logo=filament&logoColor=white" alt="Filament" /></a>
-    <a href="https://playwright.dev"><img src="https://img.shields.io/badge/Playwright-1.40-000000?logo=playwright&logoColor=white" alt="Playwright" /></a>
+    <a href="https://playwright.dev"><img src="https://img.shields.io/badge/Playwright-1.58-000000?logo=playwright&logoColor=white" alt="Playwright" /></a>
     <a href="https://phpstan.org"><img src="https://img.shields.io/badge/PHPStan-level%205-brightgreen.svg?style=flat" alt="PHPStan" /></a>
   </p>
 
@@ -67,11 +68,11 @@ When you install a Saucebase module, the source code lands in your `modules/` di
 | Layer | Technologies |
 |---|---|
 | **Backend** | Laravel 13 · PHP 8.4+ · Filament 5 · Spatie Permission |
-| **Frontend** | Vue 3 · TypeScript 5.8 · Inertia.js 2.0 · shadcn-vue |
+| **Frontend** | Vue 3 · TypeScript 5.9 · Inertia.js 3.0 · shadcn-vue |
 | **Styling** | Tailwind CSS 4 · Reka UI · Lucide icons |
 | **Database** | MySQL · Redis |
 | **Testing** | Playwright (E2E) · PHPUnit |
-| **Dev Tools** | Vite 6 · PHPStan · Laravel Pint · ESLint · Prettier · Husky |
+| **Dev Tools** | Vite 8 · PHPStan · Laravel Pint · ESLint · Prettier · Husky |
 | **Infrastructure** | Docker · Nginx · Mailpit |
 
 ---
@@ -94,6 +95,9 @@ Site-wide announcement banners: rich text, scheduling, audience targeting (guest
 
 ### 🧭 [Roadmap](https://github.com/saucebase-dev/roadmap)
 The Roadmap module gives authenticated users a page to suggest features or bugs, vote on what matters most, and see where things stand. New suggestions go through a moderation step before they become visible to others.
+
+### 🎨 [Themes](https://github.com/saucebase-dev/themes)
+The Themes module provides visual theme switching for your application, allowing users to choose from multiple pre-built color palettes built on Tailwind CSS 4 and shadcn-vue.
 
 ## Documentation
 
@@ -118,6 +122,7 @@ Full installation guides, configuration reference, architecture deep-dives, and 
 | [saucebase-dev/settings](https://github.com/saucebase-dev/settings) | Settings module |
 | [saucebase-dev/billing](https://github.com/saucebase-dev/billing) | Billing module |
 | [saucebase-dev/announcements](https://github.com/saucebase-dev/announcements) | Announcements module |
+| [saucebase-dev/themes](https://github.com/saucebase-dev/themes) | Themes module |
 | [saucebase-dev/docs](https://github.com/saucebase-dev/docs) | Documentation site |
 | [saucebase-dev/laravel-playwright](https://github.com/saucebase-dev/laravel-playwright) | Laravel + Playwright integration |
 

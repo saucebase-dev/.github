@@ -106,7 +106,7 @@ Filament admin at `/admin`.
 
 ## Documentation
 
-You can get Saucebase running in just a few seconds. Only Docker and Node.js are required:
+You can get Saucebase running in just a few seconds. Use the laravel official CLI:
 
 ```bash
 laravel new --using=saucebase/saucebase

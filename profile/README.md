@@ -11,7 +11,7 @@
     <a href="https://github.com/saucebase-dev/saucebase/actions/workflows/test.yml"><img src="https://github.com/saucebase-dev/saucebase/actions/workflows/test.yml/badge.svg" alt="Tests" /></a>
     <a href="https://github.com/saucebase-dev/saucebase/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License" /></a>
     <a href="https://php.net"><img src="https://img.shields.io/badge/PHP-8.4%2B-777BB4?logo=php&logoColor=white" alt="PHP Version" /></a>
-    <a href="https://laravel.com"><img src="https://img.shields.io/badge/Laravel-13.0-FF2D20?logo=laravel&logoColor=white" alt="Laravel" /></a>
+    <a href="https://laravel.com"><img src="https://img.shields.io/badge/Laravel-13-FF2D20?logo=laravel&logoColor=white" alt="Laravel" /></a>
     <a href="https://vuejs.org"><img src="https://img.shields.io/badge/Vue.js-3.4-4FC08D?logo=vue.js&logoColor=white" alt="Vue.js" /></a>
     <a href="https://typescriptlang.org"><img src="https://img.shields.io/badge/TypeScript-5.9-3178C6?logo=typescript&logoColor=white" alt="TypeScript" /></a>
     <a href="https://vitejs.dev"><img src="https://img.shields.io/badge/Vite-8.0-646CFF?logo=vite&logoColor=white" alt="Vite" /></a>
@@ -99,6 +99,11 @@ The Roadmap module gives authenticated users a page to suggest features or bugs,
 ### 🎨 [Themes](https://github.com/saucebase-dev/themes)
 The Themes module provides visual theme switching for your application, allowing users to choose from multiple pre-built color palettes built on Tailwind CSS 4 and shadcn-vue.
 
+### 📝 [Blog](https://github.com/saucebase-dev/blog)                                                                     
+Full-featured blog with posts, categories, cover images, author attribution, and SEO metadata. Supports scheduled        
+publishing, dual-slug routing (`/blog/{slug}` and `/blog/{category}/{slug}`), and SSR for public pages. Managed via      
+Filament admin at `/admin`. 
+
 ## Documentation
 
 You can get Saucebase running in just a few seconds. Only Docker and Node.js are required:
@@ -123,6 +128,7 @@ Full installation guides, configuration reference, architecture deep-dives, and 
 | [saucebase-dev/billing](https://github.com/saucebase-dev/billing) | Billing module |
 | [saucebase-dev/announcements](https://github.com/saucebase-dev/announcements) | Announcements module |
 | [saucebase-dev/themes](https://github.com/saucebase-dev/themes) | Themes module |
+| [saucebase-dev/blog](https://github.com/saucebase-dev/blog) | Blog module |
 | [saucebase-dev/docs](https://github.com/saucebase-dev/docs) | Documentation site |
 | [saucebase-dev/laravel-playwright](https://github.com/saucebase-dev/laravel-playwright) | Laravel + Playwright integration |
 

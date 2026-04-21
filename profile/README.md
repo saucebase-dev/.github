@@ -109,9 +109,7 @@ Filament admin at `/admin`.
 You can get Saucebase running in just a few seconds. Only Docker and Node.js are required:
 
 ```bash
-git clone https://github.com/sauce-base/saucebase.git my-app
-cd my-app
-bash bin/setup-env
+laravel new --using=saucebase/saucebase
 ```
 
 Full installation guides, configuration reference, architecture deep-dives, and development workflows are maintained in the **[Saucebase Documentation](https://saucebase-dev.github.io/docs/)** — the single source of truth.

@@ -1,0 +1,42 @@
+name: Bug Report
+description: "Report something that's broken."
+body:
+  - type: markdown
+    attributes:
+      value: "Before submitting, search existing issues and make sure you're on the latest release."
+  - type: input
+    attributes:
+      label: Saucebase Version
+      description: The `saucebase/core` version from `composer show saucebase/core`.
+      placeholder: 1.2.0
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Laravel Version
+      placeholder: 13.0.0
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: PHP Version
+      placeholder: 8.4.0
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Modules
+      description: The modules involved, if any.
+      placeholder: auth, billing
+  - type: textarea
+    attributes:
+      label: Description
+      description: What happened, and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Steps To Reproduce
+      description: The smallest set of steps that reproduces the bug, ideally on a fresh `saucebase new` app.
+    validations:
+      required: true
